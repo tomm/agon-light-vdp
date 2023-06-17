@@ -640,7 +640,7 @@ impl VDP<'_> {
         for byte in output.iter() {
             self.tx.send(*byte);
         }
-        println!("Send packet to MOS: {:#02X?}", output);
+        //println!("Send packet to MOS: {:#02X?}", output);
     }
 
     fn read_byte(&mut self) -> u8 {
@@ -680,7 +680,7 @@ impl VDP<'_> {
                 } else {    
                     match n {
                         n if n >= 0x20 && n != 0x7F => {
-                            println!("Received character: {}", n as char);
+                            //println!("Received character: {}", n as char);
                             self.render_char(n);
                             self.cursor.right();
                             self.check_scrolling_needed();

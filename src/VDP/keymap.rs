@@ -133,7 +133,7 @@ pub mod keymap {
     }
 
     pub fn sdl_scancode_to_fbgl_virtual_key(scancode: Scancode, keymod: Mod) -> FabGlVirtualKey {
-        println!("scancode: {}, keymod: {:?}", scancode as u8, keymod);
+        //println!("scancode: {}, keymod: {:?}", scancode as u8, keymod);
         let shift = keymod.intersects(Mod::LSHIFTMOD | Mod::RSHIFTMOD);
         let caps_lock = keymod.intersects(Mod::CAPSMOD);
         match scancode {
